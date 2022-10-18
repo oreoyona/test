@@ -1,0 +1,250 @@
+@media only screen and (max-width: 800px) {
+    .hero-text{
+        height: 100% !important;
+        width: 100% !important;
+        
+        transform: translateY(-20vh);
+    }
+
+    .hero-text img {
+        height: 200% !important;
+        margin: 120px 0 0 15px !important;
+    }
+    header, footer{
+        font-size: 0.7em;
+        margin: 0 10px;
+    }
+    
+    .logo > img :not(#footer-logo){
+        height: 100% !important;
+   
+    }
+    #footer-logo{
+        height: 120%;
+        width: 100%;
+    }
+    .slider{
+        overflow-x: visible !important;
+      
+    }
+
+    .slider-1{
+        
+        display: flex !important;
+        flex-direction: row !important;
+        margin: 0 50px;
+      
+    }
+
+    .slider-1  img, .slider-2 img{
+        padding: 0 20px;
+        animation: fade .3s ease-in-out;
+
+    }
+
+
+}
+
+@media only screen and (min-width: 801px){
+    .hero-text{
+        margin: -60px 0 0 0;
+        transform: translateX(10px);
+        height: 100%;
+    }
+}
+
+html{
+
+    height: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12. 1fr);
+    transition: all 2s ease-in-out;
+    overflow-x: hidden;
+}
+/* CSS for the page 1 */
+.hero{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 20% 60% 20%;
+    height: 100vh;
+    background-image: url("./images/mountains.png");
+    background-size: cover;
+    font-family: 'BebasNeueRegular';
+    overflow: hidden;
+    filter: hue-rotate(-20deg);
+
+    
+}
+.hero-text{
+    grid-column: 1/-1;
+    grid-row: 2;
+    width: 100%;
+
+}
+
+.hero-text > img{
+    display: flex;
+    height: 500%;
+    width: 100%;
+}
+
+a{
+    color: white;
+}
+header{
+    grid-column: 1/-1;
+    grid-row: 1;
+    background-color: transparent;
+    position: relative;
+    top: 0;
+    z-index: 1;
+    color: white;
+    text-decoration: underline;
+
+}
+footer{
+    grid-column: 1/-1;
+    grid-row: 3;
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+}
+header, footer{
+    
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    padding: 10px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+
+    
+}
+.logo{
+    grid-column: 2;
+}
+
+.footer-text{
+    grid-column: 5;
+}
+.footer-text-2{
+    grid-column: 7;
+}
+
+footer span > a{
+    color: rgb(23, 23, 23);
+}
+
+.hero-page2{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("./images/peak.png");
+    background-size: 100% 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    filter: hue-rotate(-20deg);
+    opacity: 0;
+    animation: fade 6s ease;
+}
+
+#page2-text, #page2-text-2{
+    grid-column: 2;
+    font-family: "Oswald";
+    color: rgb(65, 79, 107);
+    font-weight: bold;
+    line-height: 1.2;
+    display: flex;  
+      
+}
+
+#page2-text{
+    font-size: 7em;
+}
+
+#page2-text:after{
+    background-color:rgb(65, 79, 107);
+    height: 20px;
+    width: 20px;
+    display: flex;
+    transform: translateY(87px);
+    content: "";
+    border: 1px solid inherit;
+}
+
+#page2-text-2{
+    position: relative;
+    transform: translateY(-30vh);
+    margin: 0 0 0 110px;
+    font-size: 1.5em;
+}
+#page2-text-3{
+    transform: translateY(-39vh);
+    grid-column: 2/6;
+    grid-row: 3;
+    margin: 0 0 0 140px;
+}
+
+.slider{
+    grid-column: 1 / 8;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(65, 79, 107, 0.558);
+    flex-direction: column;
+
+}
+
+.slider-2 img, .slider-1 img{  
+    padding: 0 10px;
+}
+
+
+.circle1, .circle2{
+    margin: 4px;
+    border: 5px solid white;
+    border-radius: 50px;
+    content: ' ';
+    display: inline-flex;
+    cursor: pointer;
+}
+.not-active{
+    border: 5px solid rgba(251, 251, 251, 0.313);
+ 
+}
+
+.slider-1-not-active{
+    display: none !important;
+}
+
+.slider-1  img, .slider-2 img{
+    animation: fade .3s ease-in-out;
+
+}
+
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+   
+}
